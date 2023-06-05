@@ -94,23 +94,23 @@ const softwares = [
 
 export default function Softwares() {
   return (
-    <section>
-      <div>
-        <h2>Softwares</h2>
-        <p>Pickup</p>
+    <section className={styles.container}>
+      <div className={styles.title}>
+        <h2>소프트웨어</h2>
+        <p>Pick-up</p>
       </div>
       <ul className={styles.list}>
-        {softwares.map((sw, index) => {
+        {softwares.map((sw) => {
           return (
             <li key={sw.id} className={styles.item}>
-              <a href="javascript:void(0)">
+              <a href="/">
                 <div>
                   <img src={`${sw.thumbnail}`} alt="software thumbnail" />
                 </div>
                 <div>
                   <p>{sw.title}</p>
                 </div>
-                <div>
+                <div className={styles.leftInfo}>
                   <div>
                     <p>{sw.hardware}</p>
                     <p>{sw.release}</p>
@@ -118,7 +118,7 @@ export default function Softwares() {
                     <p>{sw.publisher}</p>
                     <p>{sw.softcategory}</p>
                   </div>
-                  <div>
+                  <div className={styles.rightInfo}>
                     <p>{sw.age}</p>
                     <p>{'>'}</p>
                   </div>
@@ -128,7 +128,7 @@ export default function Softwares() {
           )
         })}
       </ul>
-      <div>
+      <div className={styles.moreBtnCover}>
         <button>{'더보기 >'}</button>
       </div>
     </section>

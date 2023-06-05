@@ -52,7 +52,7 @@ const news = [
     createdAt: '2023.5.11'
   },
   {
-    id: '126222',
+    id: '126922',
     title: '『젤다의 전설 브레스 오브 더 와일드』 당신이 모르는 하이랄 하이랄 전토가 공개되었습니다.',
     link: 'https://www.nintendo.co.kr/zelda/botw/discovery/ex.html',
     category: '뉴스',
@@ -71,7 +71,7 @@ const news = [
 
 export default function News() {
   return (
-    <section>
+    <section className={styles.container}>
       <div className={styles.title}>
         <h2>새롭게 알려드립니다.</h2>
         <p>News & Update</p>
@@ -84,24 +84,19 @@ export default function News() {
                 <div>
                   <img src={`${item.thumbnail}`} alt="news thumbnail" />
                 </div>
-                <div>
-                  <p>{item.title}</p>
-                </div>
-                <div>
+                <p className={styles.title}>{item.title}</p>
+                <div className={styles.info}>
                   <div>
                     <p>{item.category}</p>
                     <p>{item.createdAt}</p>
                   </div>
-                  <div>{'>'}</div>
+                  <div className={styles.arrow}>{'>'}</div>
                 </div>
               </a>
             </li>
           )
         })}
       </ul>
-      <div>
-        <button>{'> 더보기는 없앨 예정!'} </button>
-      </div>
     </section>
   )
 }
