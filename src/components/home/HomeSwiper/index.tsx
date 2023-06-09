@@ -9,7 +9,6 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/scrollbar'
 import 'swiper/css/a11y'
-import 'swiper/css/parallax'
 
 const sildeItems = [
   {
@@ -38,7 +37,7 @@ const sildeItems = [
   }
 ]
 
-export default function MainSwiper() {
+export default function HomeSwiper() {
   // https://stackoverflow.com/questions/74261179/how-to-create-swiper-slider-with-progress-bar
 
   return (
@@ -50,9 +49,6 @@ export default function MainSwiper() {
         spaceBetween={50}
         slidesPerView={1}
         navigation
-        parallax={{
-          enabled: true
-        }}
         pagination={{
           clickable: true,
           renderBullet(idx, className) {
